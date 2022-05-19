@@ -29,7 +29,7 @@ let a: number;
 a = 1;
 a = true;
 a = 'a';
-*/
+
 
 let a: number;
 let b: boolean;
@@ -49,3 +49,9 @@ enum Color {
   Purple = 3,
 }
 let backgroundColor = Color.Red;
+*/
+
+let message;
+message = 'abc';
+let endsWithC = (<string>message).endsWith('c');
+let alternativeWay = (message as string).endsWith('c');
