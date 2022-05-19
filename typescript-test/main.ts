@@ -49,9 +49,21 @@ enum Color {
   Purple = 3,
 }
 let backgroundColor = Color.Red;
-*/
+
 
 let message;
 message = 'abc';
 let endsWithC = (<string>message).endsWith('c');
 let alternativeWay = (message as string).endsWith('c');
+*/
+
+let log = function (message) {
+  console.log(message);
+};
+
+let doLog = (message) => {
+  console.log(message);
+};
+
+let doLog1 = (message) => console.log(message);
+let doLog2 = () => console.log();
