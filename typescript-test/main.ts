@@ -55,7 +55,7 @@ let message;
 message = 'abc';
 let endsWithC = (<string>message).endsWith('c');
 let alternativeWay = (message as string).endsWith('c');
-*/
+
 
 let log = function (message) {
   console.log(message);
@@ -67,3 +67,26 @@ let doLog = (message) => {
 
 let doLog1 = (message) => console.log(message);
 let doLog2 = () => console.log();
+
+
+let drawPoint = (point) => {
+  // ...
+};
+
+drawPoint({
+  name: 'Mosh',
+});
+*/
+inferface Point {
+  x: number,
+  y: number
+}
+
+let drawPoint = (point: Point) => {
+  // ...
+}
+
+drawPoint ({
+  x: 1,
+  y: 2
+})
