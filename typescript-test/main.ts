@@ -76,17 +76,30 @@ let drawPoint = (point) => {
 drawPoint({
   name: 'Mosh',
 });
-*/
-inferface Point {
-  x: number,
-  y: number
+
+class Point {
+  x: number;
+  y: number;
+  draw() {
+    // ...
+  }
+
+  getDistance(another: Point) {
+    // ...
+  }
 }
 
 let drawPoint = (point: Point) => {
   // ...
-}
+};
 
-drawPoint ({
+let getDistance = (pointA: PointerEvent, pointB: Point) => {
+  // ...
+};
+
+drawPoint({
   x: 1,
-  y: 2
-})
+  y: 2,
+});
+
+*/
