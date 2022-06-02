@@ -29,21 +29,80 @@ let a: number;
 a = 1;
 a = true;
 a = 'a';
+
+
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[] = [1, 2, 3];
+let f: any[] = [1, true, 'a', false];
+
+const ColorRed = 0;
+const ColorGreen = 1;
+const COlorBlue = 2;
+
+enum Color {
+  Red = 0,
+  Green = 1,
+  Blue = 2,
+  Purple = 3,
+}
+let backgroundColor = Color.Red;
+
+
+let message;
+message = 'abc';
+let endsWithC = (<string>message).endsWith('c');
+let alternativeWay = (message as string).endsWith('c');
+
+
+let log = function (message) {
+  console.log(message);
+};
+
+let doLog = (message) => {
+  console.log(message);
+};
+
+let doLog1 = (message) => console.log(message);
+let doLog2 = () => console.log();
+
+
+let drawPoint = (point) => {
+  // ...
+};
+
+drawPoint({
+  name: 'Mosh',
+});
+
+let drawPoint = (point: Point) => {
+  // ...
+};
+
+let getDistance = (pointA: PointerEvent, pointB: Point) => {
+  // ...
+};
+
+drawPoint({
+  x: 1,
+  y: 2,
+});
+
 */
-var a;
-var b;
-var c;
-var d;
-var e = [1, 2, 3];
-var f = [1, true, 'a', false];
-var ColorRed = 0;
-var ColorGreen = 1;
-var COlorBlue = 2;
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-    Color[Color["Purple"] = 3] = "Purple";
-})(Color || (Color = {}));
-var backgroundColor = Color.Red;
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        // ...
+    };
+    return Point;
+}());
+var point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
