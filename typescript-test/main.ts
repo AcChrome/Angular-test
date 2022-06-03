@@ -127,6 +127,11 @@ class Point {
   }
 }
 
-let point: Point = new Point();
+let point = new Point();
 point.draw();
 */
+
+// Access modifier
+
+let point = new Point(1, 2);
+point.draw();
