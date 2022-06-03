@@ -129,7 +129,7 @@ class Point {
 
 let point = new Point();
 point.draw();
-*/
+
 
 // Access modifier
 
@@ -141,6 +141,20 @@ class Point {
     this.x = x;
     this.y = y;
   }
+
+  draw() {
+    console.log('X: ' + this.x + ', Y: ' + this.y);
+  }
+}
+
+let point = new Point(1, 2);
+point.draw();
+*/
+
+//Access modifier paramenters
+
+class Point {
+  constructor(private x?: number, private y?: number) {}
 
   draw() {
     console.log('X: ' + this.x + ', Y: ' + this.y);
