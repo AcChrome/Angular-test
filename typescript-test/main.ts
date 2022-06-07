@@ -163,7 +163,7 @@ class Point {
 
 let point = new Point(1, 2);
 point.draw();
-*/
+
 
 // Properties
 
@@ -187,4 +187,11 @@ class Point {
 let point = new Point(1, 2);
 let x = point.x;
 point.x = 10;
+point.draw();
+*/
+
+// module
+import { Point } from './point';
+
+let point = new Point(1, 2);
 point.draw();
